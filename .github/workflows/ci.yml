@@ -1,0 +1,30 @@
+name: Java verification
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        java: ['17', '21']
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: ${{ matrix.java }}
+          cache: maven
+      - name: Test cooperative runtime and legacy unit modules
+        run: sh scripts/verify.sh --batch-mode --no-transfer-progress
+      - name: Replay bug and guarded examples
+        run: |
+          sh scripts/demo.sh replay examples/timeout-bug.trace
+          sh scripts/demo.sh replay examples/timeout-guarded.trace guarded
+      - name: Run bounded corpus and strict disk replay
+        run: sh scripts/run_corpus.sh target/ci-corpus 32
+      - name: Compare workload reduction baselines and replay minimized cases
+        run: sh scripts/run_reducer.sh target/ci-reducer

@@ -1,0 +1,4 @@
+ASYNC_REPLAY	1	21	1970-01-01T00:00:00Z
+1000000000	3	cancel-retry:start-retry	2,3	OK
+1000000000	2	cancel-retry:cancel-original	2	OK
+4000000000	4	cancel-retry:check	4	dev.asyncreplay.corpus.ScenarioCorpus$InvariantViolation

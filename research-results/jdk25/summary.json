@@ -1,0 +1,16 @@
+{
+  "schema_version":1,
+  "status":"PASS",
+  "seed_start":0,
+  "seed_end_exclusive":32,
+  "rows":256,
+  "expected_rows":256,
+  "totals":{"runs":256,"passes":182,"invariant_failures":74,"replay_matches":256,"unexpected_errors":0},
+  "acceptance":{"passed":true,"violations":[]},
+  "per_scenario":[
+    {"scenario":"timeout-late-effect","buggy":{"runs":32,"passes":11,"invariant_failures":21,"replay_matches":32,"unexpected_errors":0},"fixed":{"runs":32,"passes":32,"invariant_failures":0,"replay_matches":32,"unexpected_errors":0}},
+    {"scenario":"unknown-result-retry","buggy":{"runs":32,"passes":11,"invariant_failures":21,"replay_matches":32,"unexpected_errors":0},"fixed":{"runs":32,"passes":32,"invariant_failures":0,"replay_matches":32,"unexpected_errors":0}},
+    {"scenario":"cancel-retry","buggy":{"runs":32,"passes":21,"invariant_failures":11,"replay_matches":32,"unexpected_errors":0},"fixed":{"runs":32,"passes":32,"invariant_failures":0,"replay_matches":32,"unexpected_errors":0}},
+    {"scenario":"callback-after-close","buggy":{"runs":32,"passes":11,"invariant_failures":21,"replay_matches":32,"unexpected_errors":0},"fixed":{"runs":32,"passes":32,"invariant_failures":0,"replay_matches":32,"unexpected_errors":0}}
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "checks": "Independent CSV/JSON parsing, source fingerprint recomputation, persisted trace sizes/seed/steps, group coverage, unique paths excluding seed header, and byte-identical trace sets on JDK 21/25. Replay itself was performed by Java runner.",
+  "cross_jdk_trace_bytes_identical": true,
+  "runs": {
+    "jdk21": {
+      "java": {
+        "version": "21.0.10",
+        "runtime_version": "21.0.10+7-LTS",
+        "vendor": "Amazon.com Inc."
+      },
+      "source_sha256": "6efa674b1321c9e6155a39806e8466833b198ce666b2170b3939969124dc1d9a",
+      "totals": {
+        "runs": 256,
+        "passes": 182,
+        "invariant_failures": 74,
+        "replay_matches": 256,
+        "unexpected_errors": 0
+      },
+      "groups": [
+        {
+          "scenario": "callback-after-close",
+          "variant": "buggy",
+          "runs": 32,
+          "expected_bugs": 21,
+          "passes": 11,
+          "unique_dispatch_paths": 2
+        },
+        {
+          "scenario": "callback-after-close",
+          "variant": "fixed",
+          "runs": 32,
+          "expected_bugs": 0,
+          "passes": 32,
+          "unique_dispatch_paths": 2
+        },
+        {
+          "scenario": "cancel-retry",
+          "variant": "buggy",
+          "runs": 32,
+          "expected_bugs": 11,
+          "passes": 21,
+          "unique_dispatch_paths": 2
+        },
+        {
+          "scenario": "cancel-retry",
+          "variant": "fixed",
+          "runs": 32,
+          "expected_bugs": 0,
+          "passes": 32,
+          "unique_dispatch_paths": 2
+        },
+        {
+          "scenario": "timeout-late-effect",
+          "variant": "buggy",
+          "runs": 32,
+          "expected_bugs": 21,
+          "passes": 11,
+          "unique_dispatch_paths": 2
+        },
+        {
+          "scenario": "timeout-late-effect",
+          "variant": "fixed",
+          "runs": 32,
+          "expected_bugs": 0,
+          "passes": 32,
+          "unique_dispatch_paths": 2
+        },
+        {
+          "scenario": "unknown-result-retry",
+          "variant": "buggy",
+          "runs": 32,
+          "expected_bugs": 21,
+          "passes": 11,
+          "unique_dispatch_paths": 2
+        },
+        {
+          "scenario": "unknown-result-retry",
+          "variant": "fixed",
+          "runs": 32,
+          "expected_bugs": 0,
+          "passes": 32,
+          "unique_dispatch_paths": 2
+        }
+      ]
+    },
+    "jdk25": {
+      "java": {
+        "version": "25.0.2",
+        "runtime_version": "25.0.2+10-69",
+        "vendor": "Oracle Corporation"
+      },
+      "source_sha256": "6efa674b1321c9e6155a39806e8466833b198ce666b2170b3939969124dc1d9a",
+      "totals": {
+        "runs": 256,
+        "passes": 182,
+        "invariant_failures": 74,
+        "replay_matches": 256,
+        "unexpected_errors": 0
+      },
+      "groups": [
+        {
+          "scenario": "callback-after-close",
+          "variant": "buggy",
+          "runs": 32,
+          "expected_bugs": 21,
+          "passes": 11,
+          "unique_dispatch_paths": 2
+        },
+        {
+          "scenario": "callback-after-close",
+          "variant": "fixed",
+          "runs": 32,
+          "expected_bugs": 0,
+          "passes": 32,
+          "unique_dispatch_paths": 2
+        },
+        {
+          "scenario": "cancel-retry",
+          "variant": "buggy",
+          "runs": 32,
+          "expected_bugs": 11,
+          "passes": 21,
+          "unique_dispatch_paths": 2
+        },
+        {
+          "scenario": "cancel-retry",
+          "variant": "fixed",
+          "runs": 32,
+          "expected_bugs": 0,
+          "passes": 32,
+          "unique_dispatch_paths": 2
+        },
+        {
+          "scenario": "timeout-late-effect",
+          "variant": "buggy",
+          "runs": 32,
+          "expected_bugs": 21,
+          "passes": 11,
+          "unique_dispatch_paths": 2
+        },
+        {
+          "scenario": "timeout-late-effect",
+          "variant": "fixed",
+          "runs": 32,
+          "expected_bugs": 0,
+          "passes": 32,
+          "unique_dispatch_paths": 2
+        },
+        {
+          "scenario": "unknown-result-retry",
+          "variant": "buggy",
+          "runs": 32,
+          "expected_bugs": 21,
+          "passes": 11,
+          "unique_dispatch_paths": 2
+        },
+        {
+          "scenario": "unknown-result-retry",
+          "variant": "fixed",
+          "runs": 32,
+          "expected_bugs": 0,
+          "passes": 32,
+          "unique_dispatch_paths": 2
+        }
+      ]
+    }
+  }
+}

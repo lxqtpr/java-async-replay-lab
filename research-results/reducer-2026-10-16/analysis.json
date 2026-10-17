@@ -1,0 +1,154 @@
+{
+  "checked_on": "2026-10-17",
+  "experiment_run_date": "2026-10-16",
+  "status": "PASS",
+  "workloads": 9,
+  "modes": 2,
+  "rows_per_jdk": 18,
+  "jvm_versions": {
+    "jdk21": "21.0.10",
+    "jdk25": "25.0.2"
+  },
+  "compile_release": 17,
+  "runtime_17_tested": false,
+  "source_sha256": "9a8520e504f8896819a8b00045d2a759f3c71d23131040d0f9281e7153fc4b41",
+  "source_files_verified_against_current_copy": true,
+  "cross_jdk_identical_csv": true,
+  "cross_jdk_byte_identical_trace_files": 36,
+  "all_reductions_preserve_target_signature": true,
+  "original_and_minimized_each_fresh_strict_replayed": true,
+  "fixed_controls_pass": true,
+  "singleton_or_closure_deletions_independently_checked": true,
+  "totals_per_jdk": {
+    "PLAIN": {
+      "evaluations": 277,
+      "oracle_calls": 126,
+      "invalid_candidates": 151,
+      "other_failures": 0,
+      "cache_hits": 21
+    },
+    "DEPENDENCY_CLOSED": {
+      "evaluations": 145,
+      "oracle_calls": 145,
+      "invalid_candidates": 0,
+      "other_failures": 0,
+      "cache_hits": 59
+    }
+  },
+  "comparisons": [
+    {
+      "case": "noise-16-position-0",
+      "plain_oracle_calls": 9,
+      "closed_oracle_calls": 13
+    },
+    {
+      "case": "noise-16-position-16",
+      "plain_oracle_calls": 14,
+      "closed_oracle_calls": 10
+    },
+    {
+      "case": "noise-16-position-8",
+      "plain_oracle_calls": 20,
+      "closed_oracle_calls": 22
+    },
+    {
+      "case": "noise-4-position-0",
+      "plain_oracle_calls": 7,
+      "closed_oracle_calls": 13
+    },
+    {
+      "case": "noise-4-position-2",
+      "plain_oracle_calls": 11,
+      "closed_oracle_calls": 16
+    },
+    {
+      "case": "noise-4-position-4",
+      "plain_oracle_calls": 9,
+      "closed_oracle_calls": 10
+    },
+    {
+      "case": "noise-64-position-0",
+      "plain_oracle_calls": 13,
+      "closed_oracle_calls": 17
+    },
+    {
+      "case": "noise-64-position-32",
+      "plain_oracle_calls": 21,
+      "closed_oracle_calls": 32
+    },
+    {
+      "case": "noise-64-position-64",
+      "plain_oracle_calls": 22,
+      "closed_oracle_calls": 12
+    }
+  ],
+  "closed_uses_more_oracle_calls_in": 7,
+  "closed_uses_fewer_oracle_calls_in": 2,
+  "unit_test_suites_latest_jdk21": [
+    {
+      "suite": "dev.asyncreplay.ControlledRuntimeTest",
+      "tests": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "dev.asyncreplay.CorpusExperimentTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "dev.asyncreplay.ScenarioCorpusTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "dev.asyncreplay.junit5.AsyncReplayExtensionTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "dev.asyncreplay.junit5.AsyncReplayLifecycleTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "dev.asyncreplay.reducer.FailureReducerTest",
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "com.example.deterministicasync.experiment.CsvSummaryMainTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "com.example.deterministicasync.extension.AwaiterTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "unit_test_total_both_jdks": 46,
+  "limitations": [
+    "one handcrafted lost-ack defect, nine noise/placement workloads; not nine different defects",
+    "dependencies are manually declared; no automatic causal inference",
+    "reduces workload events; does not delete arbitrary strict RunTrace decisions",
+    "one-minimal is relative to declared DAG, oracle and deletion mode; not globally optimal",
+    "validity checks before the oracle mean fewer candidates do not imply fewer runtime executions",
+    "no CPU/wall-time/memory benchmark or patent novelty established"
+  ]
+}

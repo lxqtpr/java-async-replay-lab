@@ -1,0 +1,4 @@
+ASYNC_REPLAY	1	21	1970-01-01T00:00:00Z
+1000000000	2	callback-after-close:completion	1,2	OK
+1000000000	1	callback-after-close:close-resource	1	OK
+4000000000	3	callback-after-close:check	3	OK

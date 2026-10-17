@@ -1,0 +1,199 @@
+id	requires
+target:open	
+target:commit	target:open
+target:timeout	target:commit
+target:retry	target:timeout
+target:ack	target:retry
+target:check	target:ack
+noise-0:open	
+noise-0:work	noise-0:open
+noise-0:close	noise-0:work
+noise-1:open	
+noise-1:work	noise-1:open
+noise-1:close	noise-1:work
+noise-2:open	
+noise-2:work	noise-2:open
+noise-2:close	noise-2:work
+noise-3:open	
+noise-3:work	noise-3:open
+noise-3:close	noise-3:work
+noise-4:open	
+noise-4:work	noise-4:open
+noise-4:close	noise-4:work
+noise-5:open	
+noise-5:work	noise-5:open
+noise-5:close	noise-5:work
+noise-6:open	
+noise-6:work	noise-6:open
+noise-6:close	noise-6:work
+noise-7:open	
+noise-7:work	noise-7:open
+noise-7:close	noise-7:work
+noise-8:open	
+noise-8:work	noise-8:open
+noise-8:close	noise-8:work
+noise-9:open	
+noise-9:work	noise-9:open
+noise-9:close	noise-9:work
+noise-10:open	
+noise-10:work	noise-10:open
+noise-10:close	noise-10:work
+noise-11:open	
+noise-11:work	noise-11:open
+noise-11:close	noise-11:work
+noise-12:open	
+noise-12:work	noise-12:open
+noise-12:close	noise-12:work
+noise-13:open	
+noise-13:work	noise-13:open
+noise-13:close	noise-13:work
+noise-14:open	
+noise-14:work	noise-14:open
+noise-14:close	noise-14:work
+noise-15:open	
+noise-15:work	noise-15:open
+noise-15:close	noise-15:work
+noise-16:open	
+noise-16:work	noise-16:open
+noise-16:close	noise-16:work
+noise-17:open	
+noise-17:work	noise-17:open
+noise-17:close	noise-17:work
+noise-18:open	
+noise-18:work	noise-18:open
+noise-18:close	noise-18:work
+noise-19:open	
+noise-19:work	noise-19:open
+noise-19:close	noise-19:work
+noise-20:open	
+noise-20:work	noise-20:open
+noise-20:close	noise-20:work
+noise-21:open	
+noise-21:work	noise-21:open
+noise-21:close	noise-21:work
+noise-22:open	
+noise-22:work	noise-22:open
+noise-22:close	noise-22:work
+noise-23:open	
+noise-23:work	noise-23:open
+noise-23:close	noise-23:work
+noise-24:open	
+noise-24:work	noise-24:open
+noise-24:close	noise-24:work
+noise-25:open	
+noise-25:work	noise-25:open
+noise-25:close	noise-25:work
+noise-26:open	
+noise-26:work	noise-26:open
+noise-26:close	noise-26:work
+noise-27:open	
+noise-27:work	noise-27:open
+noise-27:close	noise-27:work
+noise-28:open	
+noise-28:work	noise-28:open
+noise-28:close	noise-28:work
+noise-29:open	
+noise-29:work	noise-29:open
+noise-29:close	noise-29:work
+noise-30:open	
+noise-30:work	noise-30:open
+noise-30:close	noise-30:work
+noise-31:open	
+noise-31:work	noise-31:open
+noise-31:close	noise-31:work
+noise-32:open	
+noise-32:work	noise-32:open
+noise-32:close	noise-32:work
+noise-33:open	
+noise-33:work	noise-33:open
+noise-33:close	noise-33:work
+noise-34:open	
+noise-34:work	noise-34:open
+noise-34:close	noise-34:work
+noise-35:open	
+noise-35:work	noise-35:open
+noise-35:close	noise-35:work
+noise-36:open	
+noise-36:work	noise-36:open
+noise-36:close	noise-36:work
+noise-37:open	
+noise-37:work	noise-37:open
+noise-37:close	noise-37:work
+noise-38:open	
+noise-38:work	noise-38:open
+noise-38:close	noise-38:work
+noise-39:open	
+noise-39:work	noise-39:open
+noise-39:close	noise-39:work
+noise-40:open	
+noise-40:work	noise-40:open
+noise-40:close	noise-40:work
+noise-41:open	
+noise-41:work	noise-41:open
+noise-41:close	noise-41:work
+noise-42:open	
+noise-42:work	noise-42:open
+noise-42:close	noise-42:work
+noise-43:open	
+noise-43:work	noise-43:open
+noise-43:close	noise-43:work
+noise-44:open	
+noise-44:work	noise-44:open
+noise-44:close	noise-44:work
+noise-45:open	
+noise-45:work	noise-45:open
+noise-45:close	noise-45:work
+noise-46:open	
+noise-46:work	noise-46:open
+noise-46:close	noise-46:work
+noise-47:open	
+noise-47:work	noise-47:open
+noise-47:close	noise-47:work
+noise-48:open	
+noise-48:work	noise-48:open
+noise-48:close	noise-48:work
+noise-49:open	
+noise-49:work	noise-49:open
+noise-49:close	noise-49:work
+noise-50:open	
+noise-50:work	noise-50:open
+noise-50:close	noise-50:work
+noise-51:open	
+noise-51:work	noise-51:open
+noise-51:close	noise-51:work
+noise-52:open	
+noise-52:work	noise-52:open
+noise-52:close	noise-52:work
+noise-53:open	
+noise-53:work	noise-53:open
+noise-53:close	noise-53:work
+noise-54:open	
+noise-54:work	noise-54:open
+noise-54:close	noise-54:work
+noise-55:open	
+noise-55:work	noise-55:open
+noise-55:close	noise-55:work
+noise-56:open	
+noise-56:work	noise-56:open
+noise-56:close	noise-56:work
+noise-57:open	
+noise-57:work	noise-57:open
+noise-57:close	noise-57:work
+noise-58:open	
+noise-58:work	noise-58:open
+noise-58:close	noise-58:work
+noise-59:open	
+noise-59:work	noise-59:open
+noise-59:close	noise-59:work
+noise-60:open	
+noise-60:work	noise-60:open
+noise-60:close	noise-60:work
+noise-61:open	
+noise-61:work	noise-61:open
+noise-61:close	noise-61:work
+noise-62:open	
+noise-62:work	noise-62:open
+noise-62:close	noise-62:work
+noise-63:open	
+noise-63:work	noise-63:open
+noise-63:close	noise-63:work

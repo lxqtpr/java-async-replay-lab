@@ -1,0 +1,7 @@
+id	requires
+target:open	
+target:commit	target:open
+target:timeout	target:commit
+target:retry	target:timeout
+target:ack	target:retry
+target:check	target:ack

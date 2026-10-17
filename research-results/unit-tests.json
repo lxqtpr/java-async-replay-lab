@@ -1,0 +1,62 @@
+{
+  "executed_java_versions": [
+    "25.0.2",
+    "21.0.10"
+  ],
+  "command": "sh scripts/verify.sh -o",
+  "suites": [
+    {
+      "suite": "com.example.deterministicasync.extension.AwaiterTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "dev.asyncreplay.junit5.AsyncReplayExtensionTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "dev.asyncreplay.junit5.AsyncReplayLifecycleTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "dev.asyncreplay.ScenarioCorpusTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "dev.asyncreplay.CorpusExperimentTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "dev.asyncreplay.ControlledRuntimeTest",
+      "tests": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "com.example.deterministicasync.experiment.CsvSummaryMainTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "total": 34,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0
+}

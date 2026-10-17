@@ -1,0 +1,19 @@
+id	requires
+target:open	
+target:commit	target:open
+target:timeout	target:commit
+target:retry	target:timeout
+target:ack	target:retry
+target:check	target:ack
+noise-0:open	
+noise-0:work	noise-0:open
+noise-0:close	noise-0:work
+noise-1:open	
+noise-1:work	noise-1:open
+noise-1:close	noise-1:work
+noise-2:open	
+noise-2:work	noise-2:open
+noise-2:close	noise-2:work
+noise-3:open	
+noise-3:work	noise-3:open
+noise-3:close	noise-3:work

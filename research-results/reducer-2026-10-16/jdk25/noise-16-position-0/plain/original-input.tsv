@@ -1,0 +1,55 @@
+id	requires
+target:open	
+target:commit	target:open
+target:timeout	target:commit
+target:retry	target:timeout
+target:ack	target:retry
+target:check	target:ack
+noise-0:open	
+noise-0:work	noise-0:open
+noise-0:close	noise-0:work
+noise-1:open	
+noise-1:work	noise-1:open
+noise-1:close	noise-1:work
+noise-2:open	
+noise-2:work	noise-2:open
+noise-2:close	noise-2:work
+noise-3:open	
+noise-3:work	noise-3:open
+noise-3:close	noise-3:work
+noise-4:open	
+noise-4:work	noise-4:open
+noise-4:close	noise-4:work
+noise-5:open	
+noise-5:work	noise-5:open
+noise-5:close	noise-5:work
+noise-6:open	
+noise-6:work	noise-6:open
+noise-6:close	noise-6:work
+noise-7:open	
+noise-7:work	noise-7:open
+noise-7:close	noise-7:work
+noise-8:open	
+noise-8:work	noise-8:open
+noise-8:close	noise-8:work
+noise-9:open	
+noise-9:work	noise-9:open
+noise-9:close	noise-9:work
+noise-10:open	
+noise-10:work	noise-10:open
+noise-10:close	noise-10:work
+noise-11:open	
+noise-11:work	noise-11:open
+noise-11:close	noise-11:work
+noise-12:open	
+noise-12:work	noise-12:open
+noise-12:close	noise-12:work
+noise-13:open	
+noise-13:work	noise-13:open
+noise-13:close	noise-13:work
+noise-14:open	
+noise-14:work	noise-14:open
+noise-14:close	noise-14:work
+noise-15:open	
+noise-15:work	noise-15:open
+noise-15:close	noise-15:work
