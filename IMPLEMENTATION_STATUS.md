@@ -2,9 +2,21 @@
 
 Updated: 17 October 2026. The original corpus sections below describe the
 15 October snapshot; the new reducer section is explicitly separate.
-Research prototype prepared for public release. On 17 October 2026, the user
+Public research prototype. On 17 October 2026, the user
 confirmed the right to publish the new code and retained legacy modules.
 No software-registration or patent application has been submitted.
+
+## GitHub Actions verification
+
+[Run 39054600394](https://github.com/lxqtpr/java-async-replay-lab/actions/runs/39054600394) succeeded on JDK 17 and 21 for commit
+[`9d3653a2a1da3f0851bed139d41bc41c45ed0774`](https://github.com/lxqtpr/java-async-replay-lab/commit/9d3653a2a1da3f0851bed139d41bc41c45ed0774).
+Both matrix jobs ran the verification suite, the buggy and guarded example
+replays, the 32-seed four-scenario corpus with strict disk replay, and the
+workload-reducer comparison. JDK 17 runtime execution is therefore verified
+for these areas. The legacy PostgreSQL/Testcontainers integration demo and
+the optional packaged JAR were not exercised by this workflow. This hosted
+run is additional evidence; the historical datasets and their source
+fingerprints below are unchanged.
 
 ## Completed
 
@@ -65,8 +77,9 @@ sh scripts/demo.sh replay examples/timeout-guarded.trace guarded
 The bug run and its replay reported `result=timeout, effects=1, steps=3`
 and `BUG REPRODUCED`. The guarded run and its replay reported
 `result=timeout, effects=0, steps=3` and `invariant satisfied`. These are
-logical scenario counters, not latency/throughput measurements. Runtime JDK 17
-was not available, so execution on JDK 17 itself is not claimed.
+logical scenario counters, not latency/throughput measurements. These local
+runs used JDK 21/25; JDK 17 runtime execution has since passed the hosted
+workflow described above.
 
 ## Recorded corpus experiment
 
@@ -131,8 +144,8 @@ associate the old experiment fingerprint with the expanded repository.
 ### Still unimplemented or unverified
 
 The PostgreSQL/Testcontainers demo and its old experiment script were not run.
-A GitHub Actions workflow is configured for JDK 17/21 using the same local
-commands; its first hosted run is pending. There are no new real-service or
+The JDK 17/21 GitHub Actions workflow passed as recorded above. There are no
+new real-service or
 process-crash experiments, comparisons with other libraries, performance data,
 distributed faults, general runtime-trace minimizer, automatic failing-test
 attachment for arbitrary JUnit tests, or independent external reproduction. Corpus-specific CSV and

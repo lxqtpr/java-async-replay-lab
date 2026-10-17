@@ -1,10 +1,12 @@
 # Java Async Replay Lab
 
+[![Java verification](https://github.com/lxqtpr/java-async-replay-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/lxqtpr/java-async-replay-lab/actions/runs/39054600394)
+
 A small Java test runtime for **explicitly injected `Clock` and `Executor`**:
 advance virtual time, explore alternative orders of tasks with the same deadline,
 save the execution decisions, and replay a timeout/completion defect in JUnit 5.
 
-**Status: research prototype prepared for public release.** No production reliability, performance,
+**Status: public research prototype.** No production reliability, performance,
 worldwide novelty, patentability, or general Java thread determinism is claimed.
 See [implementation status](IMPLEMENTATION_STATUS.md) for the checks actually run.
 
@@ -43,7 +45,9 @@ sh scripts/verify.sh -o
 The verification command covers the new core, adapter and workload reducer plus the exported
 legacy extension and CSV summary unit tests. It does not run Docker/PostgreSQL.
 Locally, 46 tests passed on JDK 21.0.10 and 25.0.2: the previous 34 plus
-12 reducer checks. The compiler target is Java 17; runtime JDK 17 is unverified.
+12 reducer checks. The compiler target is Java 17. The same test suite,
+example replays, bounded corpus and reducer also passed [GitHub CI](https://github.com/lxqtpr/java-async-replay-lab/actions/runs/39054600394)
+on JDK 17 and 21.
 
 ## Use in JUnit 5
 
@@ -131,7 +135,8 @@ java -jar target/async-replay-reducer-demo.jar target/reducer-from-jar
 
 Run the JAR from this repository root with its sources/POMs beside it: the runner
 fingerprints those inputs. Use a new output directory. JAR execution was checked
-on JDK 21 and 25; runtime 17 is unverified. Building a JAR does not change
+on JDK 21 and 25; the packaged JAR was not separately exercised on JDK 17.
+Building a JAR does not change
 the [license status](LICENSE-NOTICE.md).
 
 The new `async-replay-reducer` module accepts an ordered list of event IDs with
@@ -248,6 +253,10 @@ code open source; see the [license notice](LICENSE-NOTICE.md).
 
 ## GitHub Actions
 
-`.github/workflows/ci.yml` is configured to run the documented verification
-command on JDK 17 and 21 after a push or pull request. The first GitHub-hosted
-run is pending; the results above are local checks, not a CI success.
+[Run 39054600394](https://github.com/lxqtpr/java-async-replay-lab/actions/runs/39054600394) succeeded on both JDK 17 and 21 at
+commit [`9d3653a2a1da3f0851bed139d41bc41c45ed0774`](https://github.com/lxqtpr/java-async-replay-lab/commit/9d3653a2a1da3f0851bed139d41bc41c45ed0774).
+It ran the verification suite, replayed the buggy and guarded examples,
+recorded and strictly replayed the four-scenario corpus with 32 seeds, and ran
+the workload-reducer comparison. The legacy PostgreSQL/Testcontainers demo
+was not included. Saved research datasets remain the separately identified
+local JDK 21/25 runs; this CI result does not replace their source fingerprints.
