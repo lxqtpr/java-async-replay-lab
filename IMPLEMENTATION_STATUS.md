@@ -2,8 +2,9 @@
 
 Updated: 17 October 2026. The original corpus sections below describe the
 15 October snapshot; the new reducer section is explicitly separate.
-Local preparation package; no Git remote, push,
-publication, software registration, or patent application was created.
+Research prototype prepared for public release. On 17 October 2026, the user
+confirmed the right to publish the new code and retained legacy modules.
+No software-registration or patent application has been submitted.
 
 ## Completed
 
@@ -91,8 +92,8 @@ Both JDK runs have the same source fingerprint:
 `6efa674b1321c9e6155a39806e8466833b198ce666b2170b3939969124dc1d9a`.
 All 256 trace files are byte-identical between these two JDK runs. This result
 applies to this source snapshot and seed range, not arbitrary future JDKs.
-Raw data, environment and independently checked aggregates are committed to the
-local package under `research-results/`; see its `analysis.json`.
+Raw data, environment and independently checked aggregates are preserved
+under `research-results/`; see its `analysis.json`.
 
 ## Remaining work
 
@@ -130,10 +131,11 @@ associate the old experiment fingerprint with the expanded repository.
 ### Still unimplemented or unverified
 
 The PostgreSQL/Testcontainers demo and its old experiment script were not run.
-A GitHub Actions workflow has been prepared for JDK 17/21 using the same local commands, but has not run on GitHub. There are no new real-service or process-crash experiments, comparisons with
-other libraries, performance data, distributed faults, general runtime-trace minimizer,
-automatic failing-test attachment for arbitrary JUnit tests, GitHub CI result,
-independent external reproduction, or public release. Corpus-specific CSV and
+A GitHub Actions workflow is configured for JDK 17/21 using the same local
+commands; its first hosted run is pending. There are no new real-service or
+process-crash experiments, comparisons with other libraries, performance data,
+distributed faults, general runtime-trace minimizer, automatic failing-test
+attachment for arbitrary JUnit tests, or independent external reproduction. Corpus-specific CSV and
 trace artifact export are implemented. The optional evaluation roadmap remains
 unimplemented.
 
@@ -144,7 +146,7 @@ the scenario must assert application correctness. Seed compatibility across
 arbitrary JDK versions and trace compatibility across code revisions are not
 guaranteed.
 
-Ownership and license choice for the original code must be resolved before a
-public release. The package grants no new public license; see
-`LICENSE-NOTICE.md`. New mechanisms remain local while the patent-disclosure
-decision is pending. No worldwide novelty or patentability is asserted.
+Publication authorization was confirmed on 17 October 2026, including the
+retained legacy modules. No open-source license has been selected, and this
+release grants no new open-source license; see `LICENSE-NOTICE.md`. No worldwide
+novelty or patentability is asserted.

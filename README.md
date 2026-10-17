@@ -4,7 +4,7 @@ A small Java test runtime for **explicitly injected `Clock` and `Executor`**:
 advance virtual time, explore alternative orders of tasks with the same deadline,
 save the execution decisions, and replay a timeout/completion defect in JUnit 5.
 
-**Status: local, unpublished MVP.** No production reliability, performance,
+**Status: research prototype prepared for public release.** No production reliability, performance,
 worldwide novelty, patentability, or general Java thread determinism is claimed.
 See [implementation status](IMPLEMENTATION_STATUS.md) for the checks actually run.
 
@@ -131,8 +131,8 @@ java -jar target/async-replay-reducer-demo.jar target/reducer-from-jar
 
 Run the JAR from this repository root with its sources/POMs beside it: the runner
 fingerprints those inputs. Use a new output directory. JAR execution was checked
-on JDK 21 and 25; runtime 17 is unverified. This local binary does not settle
-public licensing, publication or conference artifact-access requirements.
+on JDK 21 and 25; runtime 17 is unverified. Building a JAR does not change
+the [license status](LICENSE-NOTICE.md).
 
 The new `async-replay-reducer` module accepts an ordered list of event IDs with
 explicit prerequisites and a deterministic oracle. It performs complement-based
@@ -235,17 +235,19 @@ scenarios, compatible baselines, and measurements needed before research claims.
    corpus with new defects and scheduling structures.
 2. Add baseline implementations on a genuinely common supported boundary and
    record raw seed lists, oracle results, adaptation effort, and runtime.
-3. Add trace diagnostics, failure artifact export, and CI after the API stabilizes.
+3. Add trace diagnostics and automatic failure artifact export; extend CI as
+   the API stabilizes.
 4. Connect a separate real-service integration mode without transferring this
    model's replay guarantees to real I/O. Arbitrary runtime-trace minimization,
    inferred dependencies and stronger comparison corpora remain future work.
 
-This local package has no Git remote and has not been pushed, submitted, or
-registered. New mechanisms should remain local while a patent filing decision
-is pending. Software registration and an invention patent are separate routes.
-Before publishing, confirm ownership and select a public license; see
-[license notice](LICENSE-NOTICE.md). Those decisions are not made by this MVP.
+On 17 October 2026, the user confirmed the right to publish this source,
+including the retained legacy modules. No open-source license has been selected
+for this repository. Public source availability does not by itself make the
+code open source; see the [license notice](LICENSE-NOTICE.md).
 
 ## GitHub Actions
 
-`.github/workflows/ci.yml` runs the documented verification command on JDK 17 and 21 after push or pull request. It is prepared locally; no GitHub run or green status is claimed.
+`.github/workflows/ci.yml` is configured to run the documented verification
+command on JDK 17 and 21 after a push or pull request. The first GitHub-hosted
+run is pending; the results above are local checks, not a CI success.

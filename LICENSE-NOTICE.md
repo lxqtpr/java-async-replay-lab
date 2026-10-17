@@ -1,13 +1,14 @@
-# License decision pending
+# License status
 
-This local preparation package includes source exported from the existing
+This repository includes source exported from the existing
 `deterministic-async-junit5-extension` project and new implementation work.
-No original repository license was included in the allowlisted source export.
-No public license is granted by this preparation package.
+No original repository license was included in the source export.
 
-Before a public release, the rights holder should confirm ownership of the
-original and new work, select a license, and include required notices. Do not
-remove third-party dependency licenses from a future binary distribution.
+On 17 October 2026, the user confirmed the right to publish this source,
+including the retained legacy modules. This authorization does not assert
+sole authorship of every component.
 
-The package is currently local and unpublished. A software license and a
-patent filing strategy are separate decisions.
+No open-source license has been selected, and no new open-source license is
+granted by this release. Public source availability does not by itself make
+the code open source. Third-party dependencies retain their own licenses and
+required notices.
